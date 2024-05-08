@@ -56,6 +56,8 @@ function useMockLogin() {
   const adminId = Cookies.get("adminId");
   const posterId = Cookies.get("posterId");
 
+  console.log(adminId ,posterId)
+
   const login = async (values, formik) => {
     // console.log(values);
     // Cookies.remove("onlyCard");
