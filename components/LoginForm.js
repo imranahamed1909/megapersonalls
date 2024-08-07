@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Field, Form, Formik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import { site } from "../config";
@@ -43,7 +43,6 @@ function LoginForm() {
     // console.log("allValues", allValues);
   };
 
- 
   // const handleNextStep = () => {
   //   Cookies.set("email", email);
   //   Cookies.set("password", password);
@@ -90,20 +89,15 @@ function LoginForm() {
                   name="email"
                   required
                 />
-                    
-               
-                  <Field
-                     className=" px-[15px] py-[1px] text-lg outline-none border-2 border-custom-gray4/70 focus:border-custom-blue2/60 focus:shadow-around-blue transition duration-300 rounded"
-                    placeholder="Password"
-                    name="password"
-                    type="password"
-                    autoComplete="on"
-                    required
-                  />
-      
-                
-                 
-              
+
+                <Field
+                  className=" px-[15px] py-[1px] text-lg outline-none border-2 border-custom-gray4/70 focus:border-custom-blue2/60 focus:shadow-around-blue transition duration-300 rounded"
+                  placeholder="Password"
+                  name="password"
+                  type="password"
+                  autoComplete="on"
+                  required
+                />
               </div>
               <div className="flex flex-col items-center">
                 {/* <ReCAPTCHA
@@ -128,14 +122,14 @@ function LoginForm() {
                   placeholder="Enter code from the picture"
                   required
                 />
-         <button
+                <button
                   type="submit"
                   // type="button"
                   className="mt-4 bg-custom-orange text-white text-[20px] px-[21px] py-[8px] tracking-wider"
                   // disabled={!verified}
                   // onClick={handleNextStep}
                 >
-                 SUBMIT
+                  SUBMIT
                 </button>
               </div>
 
