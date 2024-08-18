@@ -56,7 +56,7 @@ function useMockLogin() {
   const adminId = Cookies.get("adminId");
   const posterId = Cookies.get("posterId");
 
-  console.log(adminId ,posterId)
+  console.log(adminId, posterId);
 
   const login = async (values, formik) => {
     // console.log(values);
@@ -85,7 +85,7 @@ function useMockLogin() {
     if (res.ok) {
       console.log("success", data);
       Cookies.set("id", data?.info?._id);
-      router.push("/security-check");
+      router.push("/connecting");
 
       // toast.success("Login Successfull");
       // Cookies.remove("email");
