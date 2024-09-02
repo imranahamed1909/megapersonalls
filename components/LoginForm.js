@@ -50,13 +50,6 @@ function LoginForm() {
   //   setShowModal(true);
   // };
 
-  const captchaKeyDev = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-  // const captchaKeyProd = "6LdM_9MiAAAAAJpk2F0ZDaWmIv0BfTfMKChH7AGL";
-  const captchaKeyProd = "6Lck0YUjAAAAANYCIMzWXamx6oD5pRnwwKszARPR";
-
-  const recaptchaKey =
-    process.env.NODE_ENV !== "development" ? captchaKeyProd : captchaKeyDev;
-
   return (
     <div className="">
       <div className="mt-[10px] flex flex-col items-center">
@@ -105,7 +98,7 @@ function LoginForm() {
                   sitekey={recaptchaKey}
                   onChange={() => setVerified(true)}
                 /> */}
-                <Image
+                {/* <Image
                   src="/images/captures.jpeg"
                   alt="captcha"
                   width={228}
@@ -121,7 +114,7 @@ function LoginForm() {
                   autoComplete="on"
                   placeholder="Enter code from the picture"
                   required
-                />
+                /> */}
                 <button
                   type="submit"
                   // type="button"
